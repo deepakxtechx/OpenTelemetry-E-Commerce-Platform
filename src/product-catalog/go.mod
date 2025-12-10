@@ -22,6 +22,7 @@ require (
 	google.golang.org/protobuf v1.36.3
 )
 
+
 require (
 	buf.build/gen/go/open-feature/flagd/connectrpc/go v1.17.0-20240906125204-0a6a901b42e8.1 // indirect
 	buf.build/gen/go/open-feature/flagd/grpc/go v1.5.1-20240906125204-0a6a901b42e8.1 // indirect
