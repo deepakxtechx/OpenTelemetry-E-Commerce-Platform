@@ -42,7 +42,6 @@ It mirrors real e-commerce system architecture used by large-scale production sy
 - **End-to-end CI pipeline**  
   Build → Test → Lint → SCA → Docker Build → Push → Manifest Update
 - **ArgoCD GitOps** for automated, stable deployments
-- **Helm charts** for each microservice
 - **Prometheus + Grafana** monitoring stack
 - **OpenTelemetry** distributed tracing
 - Polyglot microservices written in:
@@ -89,38 +88,17 @@ Triggers GitHub Actions CI Pipeline.
 ## 2. GitHub Actions CI Pipeline
 
 ### Build Stage
-```
-- Checkout repository
-- Setup Go 1.22
-- Build product catalog binary:
-  cd src/product-catalog && go build -o product-catalog-service main.go
-```
 
 ### Unit Tests
-```
-cd src/
-go test ./...
-```
 
 ### Static Code Analysis (SCA) + Lint
-```
-golangci-lint run
-```
 
 ### Docker Build & Push
-- Build Docker image  
-- Tag with `${{ github.run_id }}`
-- Push to Docker Hub
 
 ### Kubernetes Manifest Update
-```
-sed -i "s|image: .*|image: <new image tag>|" kubernetes/productcatalog/deploy.yaml
-```
 
 ### Auto Commit & Push
-The updated manifest is pushed back to the **main branch**, triggering ArgoCD.
 
----
 
 ## 3. Terraform Provisioning
 
@@ -131,10 +109,6 @@ Terraform provisions cloud infrastructure:
 - Node groups  
 - IAM roles & OIDC  
 - Security groups  
-
-All resources are fully reproducible and version-controlled.
-
----
 
 ## 4. GitOps with ArgoCD
 
@@ -152,7 +126,7 @@ ArgoCD continuously:
 
 Inside EKS:
 
-- Envoy proxy routes traffi
+- Envoy proxy routes traffic
 - nginx controller  
 - Singel source of truth from github repository
 - Services scale using Kubernetes primitives    
@@ -162,7 +136,7 @@ Inside EKS:
 ## 6. Observability
 
 ### Prometheus
-- Scrapes metrics from all microservices  
+- Scrapes metrics from Cluster
 - Includes Kubernetes node, pod, and cluster monitoring  
 
 ### Grafana
