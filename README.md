@@ -145,72 +145,9 @@ Inside EKS:
 - Captures distributed traces  
 - Correlates events across 20+ microservices  
 - Enables root-cause analysis of failures
-
 ---
 
-# 6. Repository Structure
-
-```
-├── .github
-│   └── workflows
-├── internal
-│   └── tools
-├── kubernetes
-│   ├── accounting
-│   ├── ad
-│   ├── cart
-│   ├── checkout
-│   ├── currency
-│   ├── email
-│   ├── flagd
-│   ├── frauddetection
-│   ├── frontend
-│   ├── frontendproxy
-│   ├── imageprovider
-│   ├── kafka
-│   ├── loadgenerator
-│   ├── payment
-│   ├── productcatalog
-│   ├── quote
-│   ├── recommendation
-│   ├── shipping
-│   └── valkey
-├── pb
-├── src
-│   ├── accounting
-│   ├── ad
-│   ├── cart
-│   ├── checkout
-│   ├── currency
-│   ├── email
-│   ├── flagd
-│   ├── flagd-ui
-│   ├── fraud-detection
-│   ├── frontend
-│   ├── frontend-proxy
-│   ├── grafana
-│   ├── image-provider
-│   ├── kafka
-│   ├── load-generator
-│   ├── opensearch
-│   ├── otel-collector
-│   ├── payment
-│   ├── postgres
-│   ├── product-catalog
-│   ├── prometheus
-│   ├── quote
-│   ├── react-native-app
-│   ├── recommendation
-│   └── shipping
-└── test
-    └── tracetesting
-```
-
-This structure reflects a real polyglot microservices monorepo.
-
----
-
-# 7. Challenges & Solutions
+# 6. Challenges & Solutions
 
 ### 1. EKS OIDC Role Mismatch  
 **Issue:** Service accounts could not assume IAM roles.  
@@ -228,7 +165,7 @@ This structure reflects a real polyglot microservices monorepo.
 
 ---
 
-# 8. Conclusion
+# 7. Conclusion
 
 This project demonstrates a modern, production-grade DevOps stack, integrating:
 
