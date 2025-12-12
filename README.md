@@ -12,10 +12,8 @@ This project replicates real-world cloud architecture with automated build pipel
 https://github.com/user-attachments/assets/994e1257-1a3b-4f81-9282-74a60f29ac63
 
 ### **Architecture Diagrams**
-- CI/CD + GitOps + Terraform/EKS Workflow  
-- Full Microservices Communication Diagram  
+<img width="1572" height="839" alt="Opentelemetry drawio (1)" src="https://github.com/user-attachments/assets/5684b8fc-8d8b-4813-85fa-33eace059c7e" />
 
-(Insert PNG/SVG diagrams here)
 
 ---
 
