@@ -9,7 +9,7 @@ This project replicates real-world cloud architecture with automated build pipel
 # 1. Implementation Video & Architecture
 
 ### **Implementation Video**
-[(Add your 3-minute demo link here)](https://github.com/deepakxtechx/OpenTelemetry-E-Commerce-Platform/issues/4#issue-3722367746)
+https://github.com/user-attachments/assets/994e1257-1a3b-4f81-9282-74a60f29ac63
 
 ### **Architecture Diagrams**
 - CI/CD + GitOps + Terraform/EKS Workflow  
